@@ -1,8 +1,8 @@
 server:
-    port:8080
+    port: 8080
 
 spring:
-    Kafka:
+    kafka:
         consumer:
             bootstrap-servers: localhost:9092
             group-id: group_id
@@ -11,4 +11,16 @@ spring:
         topic: message-topic
         superhero-topic: superhero-topic
 
-
+management:
+    endpoints:
+        web:
+            exposure:
+                include: health,info,metrics
+    endpoint:
+        health:
+            show-details: always
+info:
+    app:
+        name: Spring Boot Kafka Demo
+        description: Learning project for Kafka producer-consumer patterns
+        version: 1.0.0
