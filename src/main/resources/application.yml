@@ -1,0 +1,14 @@
+server:
+    port:8080
+
+spring:
+    Kafka:
+        consumer:
+            bootstrap-servers: localhost:9092
+            group-id: group_id
+        producer:
+            bootstrap-servers: localhost:9092
+        topic: message-topic
+        superhero-topic: superhero-topic
+
+
